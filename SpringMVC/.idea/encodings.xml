@@ -2,5 +2,6 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/springmvc-01-serlvet/src/main/java/com/T_Lyon/servlet/HelloServlet.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springmvc-02-hellomvc/src/main/java/com/T_Lyon/controller/HelloController.java" charset="UTF-8" />
   </component>
 </project>

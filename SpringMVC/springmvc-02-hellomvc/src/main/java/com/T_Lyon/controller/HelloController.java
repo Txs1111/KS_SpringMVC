@@ -6,16 +6,16 @@ import org.springframework.web.servlet.mvc.Controller;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-//×¢Òâ£ºÕâÀïÎÒÃÇÏÈµ¼ÈëController½Ó¿Ú
+//æ³¨æ„ï¼šè¿™é‡Œæˆ‘ä»¬å…ˆå¯¼å…¥Controlleræ¥å£
 public class HelloController implements Controller {
 
     public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        //ModelAndView Ä£ĞÍºÍÊÓÍ¼
+        //ModelAndView æ¨¡å‹å’Œè§†å›¾
         ModelAndView mv = new ModelAndView();
 
-        //·â×°¶ÔÏó£¬·ÅÔÚModelAndViewÖĞ¡£Model
+        //å°è£…å¯¹è±¡ï¼Œæ”¾åœ¨ModelAndViewä¸­ã€‚Model
         mv.addObject("msg","HelloSpringMVC!");
-        //·â×°ÒªÌø×ªµÄÊÓÍ¼£¬·ÅÔÚModelAndViewÖĞ
+        //å°è£…è¦è·³è½¬çš„è§†å›¾ï¼Œæ”¾åœ¨ModelAndViewä¸­
         mv.setViewName("hello"); //: /WEB-INF/jsp/hello.jsp
         return mv;
     }
