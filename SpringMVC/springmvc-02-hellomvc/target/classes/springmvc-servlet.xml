@@ -17,5 +17,5 @@
     </bean>
 
     <!--Handler-->
-    <bean id="/hello" class="com.T_Lyon.controller.HelloController"/>
+    <bean id="/hello2" class="com.T_Lyon.controller.HelloController"/>
 </beans>

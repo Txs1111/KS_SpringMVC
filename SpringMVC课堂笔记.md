@@ -115,7 +115,7 @@ Model2这样不仅提高的代码的复用率与项目的扩展性，且大大�
 4. 编写一个Servlet类，用来处理用户的请求
 
    ```java
-   package nuc.ss.servlet;
+   package com.T_Lyon.servlet;
    
    //实现Servlet接口
    public class HelloServlet extends HttpServlet {
@@ -370,7 +370,7 @@ DispatcherServlet的作用是将请求分发到不同的处理器。从Spring 2.
 8. 编写我们要操作业务Controller ，要么实现Controller接口，要么增加注解；需要返回一个ModelAndView，装数据，封视图；
 
    ```java
-   package nuc.ss.controller;
+   package com.T_Lyon.controller;
    
    import org.springframework.web.servlet.ModelAndView;
    import org.springframework.web.servlet.mvc.Controller;
@@ -398,7 +398,7 @@ DispatcherServlet的作用是将请求分发到不同的处理器。从Spring 2.
 
    ```xml
    <!--Handler-->
-   <bean id="/hello" class="nuc.ss.controller.HelloController"/>
+   <bean id="/hello" class="com.T_Lyon.controller.HelloController"/>
    ```
 
 10. 写要跳转的jsp页面，显示ModelandView存放的数据，以及我们的正常页面；
@@ -516,7 +516,7 @@ DispatcherServlet的作用是将请求分发到不同的处理器。从Spring 2.
           https://www.springframework.org/schema/mvc/spring-mvc.xsd">
    
       <!-- 自动扫描包，让指定包下的注解生效,由IOC容器统一管理 -->
-      <context:component-scan base-package="nuc.ss.controller"/>
+      <context:component-scan base-package="com.T_Lyon.controller"/>
       <!-- 让Spring MVC不处理静态资源 -->
       <mvc:default-servlet-handler />
       <!--
@@ -553,10 +553,10 @@ DispatcherServlet的作用是将请求分发到不同的处理器。从Spring 2.
    
 7. **创建Controller**
 
-   编写一个Java控制类：nuc.ss.controller.HelloController , 注意编码规范
+   编写一个Java控制类：com.T_Lyon.controller.HelloController , 注意编码规范
 
    ```java
-   package nuc.ss.controller;
+   package com.T_Lyon.controller;
    
    import org.springframework.stereotype.Controller;
    import org.springframework.ui.Model;
@@ -680,7 +680,7 @@ public interface Controller {
 4. 编写完毕后，去Spring配置文件中注册请求的bean；name对应请求路径，class对应处理请求的类
 
    ```xml
-   <bean name="/t1" class="nuc.ss.controller.ControllerTest1"/>
+   <bean name="/t1" class="com.T_Lyon.controller.ControllerTest1"/>
    ```
 
 5. 编写前端test.jsp，注意在WEB-INF/jsp目录下编写，对应我们的视图解析器
@@ -719,7 +719,7 @@ public interface Controller {
 
   ```xml
   <!-- 自动扫描指定的包，下面所有注解类交给IOC容器管理 -->
-  <context:component-scan base-package="nuc.ss.controller"/>
+  <context:component-scan base-package="com.T_Lyon.controller"/>
   ```
 
 - 增加一个ControllerTest2类，使用注解实现；
@@ -2435,7 +2435,7 @@ jQuery.ajax(...)
 3. 编写一个拦截器（必须实现<font color=red> HandlerInterceptor 接口</font>）
 
    ```java
-   package nuc.ss.config;
+   package com.T_Lyon.config;
    
    import org.springframework.web.servlet.HandlerInterceptor;
    import org.springframework.web.servlet.ModelAndView;
@@ -2472,7 +2472,7 @@ jQuery.ajax(...)
        <mvc:interceptor>
            <!--包括这个请求下面的所有请求-->
            <mvc:mapping path="/**"/>
-           <bean class="nuc.ss.config.MyInterceptor"/>
+           <bean class="com.T_Lyon.config.MyInterceptor"/>
        </mvc:interceptor>
    
    </mvc:interceptors>
@@ -2481,7 +2481,7 @@ jQuery.ajax(...)
 5. 编写一个Controller，接收请求
 
    ```java
-   package nuc.ss.controller;
+   package com.T_Lyon.controller;
    
    import org.springframework.web.bind.annotation.GetMapping;
    import org.springframework.web.bind.annotation.RestController;
@@ -2607,7 +2607,7 @@ jQuery.ajax(...)
 5. 编写用户登录拦截器
 
    ```java
-   package nuc.ss.config;
+   package com.T_Lyon.config;
    
    import org.springframework.web.servlet.HandlerInterceptor;
    
@@ -2742,7 +2742,7 @@ jQuery.ajax(...)
 4. **Controller**
 
    ```java
-   package nuc.ss.controller;
+   package com.T_Lyon.controller;
    
    import org.springframework.web.bind.annotation.RequestMapping;
    import org.springframework.web.bind.annotation.RequestParam;

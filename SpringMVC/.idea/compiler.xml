@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="springmvc-02-hellomvc" />
         <module name="springmvc-01-serlvet" />
+        <module name="springmvc-03-annotation" />
       </profile>
     </annotationProcessing>
   </component>
