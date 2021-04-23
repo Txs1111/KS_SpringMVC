@@ -997,7 +997,7 @@ sn</ColNames>
     <column id="287" parent="243" name="bookCounts">
       <Position>3</Position>
       <Comment>数量</Comment>
-      <DataType>varchar(100)|0s</DataType>
+      <DataType>int(10)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="288" parent="243" name="detail">
