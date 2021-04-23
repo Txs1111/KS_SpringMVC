@@ -1,4 +1,4 @@
-package com.T_Lyon.controller;
+package com.T_Lyon.controllar;
 
 import com.T_Lyon.pojo.User;
 import org.springframework.stereotype.Controller;

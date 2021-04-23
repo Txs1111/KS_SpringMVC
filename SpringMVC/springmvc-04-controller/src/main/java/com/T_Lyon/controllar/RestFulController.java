@@ -1,4 +1,4 @@
-package com.T_Lyon.controller;
+package com.T_Lyon.controllar;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

@@ -1,4 +1,4 @@
-package com.T_Lyon.controller;
+package com.T_Lyon.controllar;
 
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.Controller;

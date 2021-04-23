@@ -10,6 +10,7 @@
         <module name="springmvc-05-json" />
         <module name="springmvc-04-controller" />
         <module name="springmvc-02-hellomvc" />
+        <module name="ssmbuild" />
         <module name="springmvc-01-serlvet" />
         <module name="springmvc-03-annotation" />
       </profile>
