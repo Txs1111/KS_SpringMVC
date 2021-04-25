@@ -17,7 +17,7 @@
 
 
     <mappers>
-        <mapper class="com.T_Lyon.mapping.BookMapper"/>
+        <mapper class="com.T_Lyon.mapper.BookMapper"/>
     </mappers>
 
 </configuration>
