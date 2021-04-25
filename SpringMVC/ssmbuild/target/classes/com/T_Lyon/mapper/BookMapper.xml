@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper>
+<mapper namespace="com.T_Lyon.mapper.BookMapper">
     <insert id="addBook" parameterType="book">
         insert into ssmbuild.books(bookName, bookCounts, detail)
         values (#{bookName}, #{bookCounts}, #{detail});
