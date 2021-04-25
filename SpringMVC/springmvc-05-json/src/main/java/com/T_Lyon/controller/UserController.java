@@ -1,4 +1,4 @@
-package com.T_Lyon.controllar;
+package com.T_Lyon.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
