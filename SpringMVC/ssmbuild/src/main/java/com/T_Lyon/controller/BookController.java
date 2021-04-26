@@ -10,7 +10,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.jar.Attributes;
 
 @Controller
 @RequestMapping("/book")
@@ -40,20 +43,54 @@ public class BookController {
         int i = bookService.addBook(book);
         return "redirect:/book/allBooks";
     }
-//    //通过问号传参数
-//    //删除书籍功能
-//    @RequestMapping("/deleteBook")
-//    public String deleteBook(int ID) {
-//        bookService.deleteBook(ID);
-//        return "redirect:/book/allBooks";
-//    }
+
+    //通过问号传参数
+    //删除书籍功能
+    @RequestMapping("/deleteBook")
+    public String deleteBook(int ID) {
+        bookService.deleteBook(ID);
+        return "redirect:/book/allBooks";
+    }
 
     //通过RestFul风格传参数
     //删除书籍功能
     @RequestMapping("/deleteBook/{bookId}")
-    public String deleteBook(@PathVariable("bookId") int ID) {
+    public String deleteBook2(@PathVariable("bookId") int ID) {
         bookService.deleteBook(ID);
         return "redirect:/book/allBooks";
+    }
+
+    //跳转到修改书籍页面
+    @RequestMapping("/toUpdateBook")
+    public String toUpdateBook(Model model, int ID) {
+        System.out.println("affasdfafeafeaf" + ID);
+        Book book = bookService.getBook(ID);
+        model.addAttribute("book", book);
+        return "updateBook";
+    }
+
+    //修改书籍信息
+    @RequestMapping("/updateBook")
+    public String updateBook(Book book) {
+        int i = bookService.updateBook(book);
+        return "redirect:/book/allBooks";
+    }
+
+    //通过名字查询书籍
+    @RequestMapping("/getBookByName")
+    public String getBookByName(String bookName, Model model) {
+        List<Book> list = new ArrayList<Book>();
+        Book book = bookService.getBookByName(bookName);
+        if (book == null || book.equals("") || book.equals("null")) {
+            List<Book> books = bookService.getBooks();
+            model.addAttribute("list", books);
+            model.addAttribute("error", "搜索结果为空");
+        } else {
+            list.add(book);
+            model.addAttribute("error", "");
+            model.addAttribute("list", list);
+        }
+        return "allBooks";
     }
 
 }

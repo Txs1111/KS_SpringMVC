@@ -33,4 +33,8 @@ public class BookServiceImpl implements BookService {
     public List<Book> getBooks() {
         return bookMapper.getBooks();
     }
+
+    public Book getBookByName(String bookName) {
+        return bookMapper.getBookByName(bookName);
+    }
 }

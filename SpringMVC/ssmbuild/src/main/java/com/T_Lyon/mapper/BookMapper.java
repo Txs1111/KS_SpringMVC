@@ -18,5 +18,8 @@ public interface BookMapper {
     //查询全部的书
     @Select("select * from ssmbuild.books;")
     List<Book> getBooks();
+    //通过名字查询书籍
+    @Select("select * from ssmbuild.books where bookName=#{bookName};")
+    Book getBookByName(@Param("bookName") String bookName);
 
 }

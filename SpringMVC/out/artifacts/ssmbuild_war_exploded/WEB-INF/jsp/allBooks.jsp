@@ -35,16 +35,16 @@
         </div>
         <div class="col-md-4 column">
             <%--查询书籍--%>
-            <form action="${pageContext.request.contextPath}/book/queryBookByName" method="post" class="form-inline">
+            <form action="${pageContext.request.contextPath}/book/getBookByName" method="get" class="form-inline">
                 <span style="color: red;font-weight: bold;">${error}</span>
-                <input type="text" name="queryBookName" class="form-control" placeholder="请输入要查询的书籍名称">
+                <input type="text" name="bookName" class="form-control" placeholder="请输入要查询的书籍名称">
                 <input type="submit" class="btn btn-primary" value="查询">
             </form>
         </div>
         <div class="col-md-4 column">
             <%--模糊查询书籍--%>
-            <form action="${pageContext.request.contextPath}/book/queryBook" method="post" class="form-inline">
-                <input type="text" name="queryBookName" class="form-control" placeholder="请输入要查询的书籍名称">
+            <form action="${pageContext.request.contextPath}/book/bookByName" method="get" class="form-inline">
+                <input type="text" name="bookName" class="form-control" placeholder="请输入要查询的书籍名称">
                 <input type="submit" class="btn btn-primary" value="模糊查询">
             </form>
         </div>
@@ -71,7 +71,7 @@
                         <td>${book.getBookCounts()}</td>
                         <td>${book.getDetail()}</td>
                         <td>
-                            <a href="${pageContext.request.contextPath}/book/toUpdateBook?id=${book.getBookID()}">更改</a>
+                            <a href="${pageContext.request.contextPath}/book/toUpdateBook?ID=${book.getBookID()}">更改</a>
                             |
                                 <%--通过问号传参--%>
                             <a href="${pageContext.request.contextPath}/book/deleteBook?ID=${book.getBookID()}">删除</a>
