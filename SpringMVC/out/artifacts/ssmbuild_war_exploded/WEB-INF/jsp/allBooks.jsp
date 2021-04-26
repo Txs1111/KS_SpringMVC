@@ -31,7 +31,7 @@
     <div class="row">
         <div class="col-md-4 column">
             <a class="btn btn-primary" href="${pageContext.request.contextPath}/book/toAddBook">新增</a>
-            <a class="btn btn-primary" href="${pageContext.request.contextPath}/book/allBook">查询所有书籍</a>
+            <a class="btn btn-primary" href="${pageContext.request.contextPath}/book/allBooks">查询所有书籍</a>
         </div>
         <div class="col-md-4 column">
             <%--查询书籍--%>
@@ -71,8 +71,12 @@
                         <td>${book.getBookCounts()}</td>
                         <td>${book.getDetail()}</td>
                         <td>
-                            <a href="${pageContext.request.contextPath}/book/toUpdateBook?id=${book.getBookID()}">更改</a> |
-                            <a href="${pageContext.request.contextPath}/book/del/${book.getBookID()}">删除</a>
+                            <a href="${pageContext.request.contextPath}/book/toUpdateBook?id=${book.getBookID()}">更改</a>
+                            |
+                                <%--通过问号传参--%>
+                            <a href="${pageContext.request.contextPath}/book/deleteBook?ID=${book.getBookID()}">删除</a>
+                                <%--通过RestFul传参--%>
+                            <a href="${pageContext.request.contextPath}/book/deleteBook/${book.getBookID()}">删除</a>
                         </td>
                     </tr>
                 </c:forEach>
