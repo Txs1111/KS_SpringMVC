@@ -12,6 +12,10 @@
 
     <!-- 自动扫描指定的包，下面所有注解类交给IOC容器管理 -->
     <context:component-scan base-package="com.T_Lyon.controller"/>
+<!--    注解驱动-->
+    <mvc:annotation-driven/>
+    <!--静态资源过滤-->
+    <mvc:default-servlet-handler/>
 
     <!--JSON乱码问题配置-->
     <mvc:annotation-driven>
@@ -30,12 +34,11 @@
     </mvc:annotation-driven>
 
     <!-- 视图解析器 -->
-    <!--<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"-->
-    <!--      id="internalResourceViewResolver">-->
-    <!--    &lt;!&ndash; 前缀 &ndash;&gt;-->
-    <!--    <property name="prefix" value="/WEB-INF/jsp/" />-->
-    <!--    &lt;!&ndash; 后缀 &ndash;&gt;-->
-    <!--    <property name="suffix" value=".jsp" />-->
-    <!--</bean>-->
-
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+          id="internalResourceViewResolver">
+        <!-- 前缀 -->
+        <property name="prefix" value="/WEB-INF/jsp/" />
+        <!-- 后缀 -->
+        <property name="suffix" value=".jsp" />
+    </bean>
 </beans>
