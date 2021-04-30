@@ -12,8 +12,8 @@
 </head>
 <body>
 <h1>首页</h1>
-<span>${password}</span>
-<span>${username}</span>
+<span>欢迎用户名为：${username}，</span>
+<span>密码为：${password}的用户进入系统</span>
 
 <p>
     <a href="${pageContext.request.contextPath}/user/goOut">注销</a>

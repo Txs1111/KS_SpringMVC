@@ -30,8 +30,8 @@ public class LoginController {
     }
 
     @RequestMapping("/goOut")
-    public String goOut(HttpSession sessionl) {
-        sessionl.removeAttribute("userLoginInfo");
+    public String goOut(HttpSession session) {
+        session.removeAttribute("userLoginInfo");
         return "login";
     }
 }
