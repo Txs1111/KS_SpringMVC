@@ -11,6 +11,7 @@
         <module name="springmvc-02-hellomvc" />
         <module name="springmvc-06-ajax" />
         <module name="springmvc-03-annotation" />
+        <module name="springmvc-07-intercepter" />
         <module name="springmvc-04-controller" />
         <module name="ssmbuild" />
         <module name="springmvc-01-serlvet" />
