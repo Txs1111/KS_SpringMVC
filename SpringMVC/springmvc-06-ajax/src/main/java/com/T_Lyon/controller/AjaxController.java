@@ -32,11 +32,13 @@ public class AjaxController {
         String msg = "";
 //        User username = UserServlet.getUser();
         if (!username.equals("username") || !password.equals("password")) {
-            System.out.println(!username.equals("username") || !password.equals("password"));
-            System.out.println(username + "-----" + password);
             msg = "账号或密码错误";
+            System.out.println(username + "-----" + password);
+            System.out.println(msg);
         } else {
             msg = "登录成功";
+            System.out.println(username + "-----" + password);
+            System.out.println(msg);
         }
         return msg;
     }

@@ -17,6 +17,13 @@
                 data: {"username": $("#username").val(), "password": $("#password").val()},
                 success: function (data) {
                     if (data != "") {
+                        if (data == "登录成功") {
+                            $("#msg").css("color", "green");
+                            $("#msg").css("font-weight", "700");
+                        } else {
+                            $("#msg").css("color", "red");
+                            $("#msg").css("font-weight", "700");
+                        }
                         $("#msg").html(data)
                     }
                 }
