@@ -7,22 +7,22 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class MyInterceptor implements HandlerInterceptor {
-    //return true; Ö´ĞĞÏÂÒ»¸öÀ¹½ØÆ÷£¬·ÅĞĞ
-    //return false; ²»Ö´ĞĞÏÂÒ»¸öÀ¹½ØÆ÷£¬À¹½Ø
+    //return true; æ‰§è¡Œä¸‹ä¸€ä¸ªæ‹¦æˆªå™¨ï¼Œæ”¾è¡Œ
+    //return false; ä¸æ‰§è¡Œä¸‹ä¸€ä¸ªæ‹¦æˆªå™¨ï¼Œæ‹¦æˆª
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        System.out.println("===========´¦ÀíÇ°===========");
+        System.out.println("===========å¤„ç†å‰===========");
         return true;
     }
 
-    //ÈÕÖ¾
+    //æ—¥å¿—
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
-        System.out.println("===========´¦Àíºó===========");
+        System.out.println("===========å¤„ç†å===========");
 
     }
 
-    //ÈÕÖ¾
+    //æ—¥å¿—
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
-        System.out.println("===========ÇåÀí===========");
+        System.out.println("===========æ¸…ç†===========");
 
     }
 }

@@ -39,16 +39,16 @@
     </bean>
 
     <!--拦截器配置-->
-<!--    <mvc:interceptors>-->
-<!--        <mvc:interceptor>-->
-<!--            &lt;!&ndash;包括这个请求下面的所有请求&ndash;&gt;-->
-<!--            <mvc:mapping path="/**"/>-->
-<!--            <bean class="com.T_Lyon.config.MyInterceptor"/>-->
-<!--        </mvc:interceptor>-->
-<!--        <mvc:interceptor>-->
-<!--            &lt;!&ndash;包括这个请求下面的所有请求&ndash;&gt;-->
-<!--            <mvc:mapping path="/**"/>-->
-<!--            <bean class="com.T_Lyon.config.LoginInterceptor"/>-->
-<!--        </mvc:interceptor>-->
-<!--    </mvc:interceptors>-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <!--包括这个请求下面的所有请求-->
+            <mvc:mapping path="/**"/>
+            <bean class="com.T_Lyon.config.MyInterceptor"/>
+        </mvc:interceptor>
+        <mvc:interceptor>
+            <!--包括这个请求下面的所有请求-->
+            <mvc:mapping path="/**"/>
+            <bean class="com.T_Lyon.config.LoginInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
 </beans>

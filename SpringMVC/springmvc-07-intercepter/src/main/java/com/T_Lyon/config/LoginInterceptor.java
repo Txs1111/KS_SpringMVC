@@ -9,9 +9,9 @@ import javax.servlet.http.HttpSession;
 public class LoginInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         HttpSession session = request.getSession();
-        //放行:判断什么情况下登录
+        //鏀捐:鍒ゆ柇浠�涔堟儏鍐典笅鐧诲綍
 
-        //登录页面也会放行
+        //鐧诲綍椤甸潰涔熶細鏀捐
         if (request.getRequestURI().contains("goLogin")) {
             return true;
         }
@@ -21,7 +21,7 @@ public class LoginInterceptor implements HandlerInterceptor {
         if (session.getAttribute("userLoginInfo") != null) {
             return true;
         }
-        //判断什么情况下没有登录
+        //鍒ゆ柇浠�涔堟儏鍐典笅娌℃湁鐧诲綍
         request.getRequestDispatcher("/WEB-INF/jsp/login.jsp").forward(request, response);
         return false;
     }
