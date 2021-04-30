@@ -26,4 +26,18 @@ public class AjaxController {
 
         return userList;
     }
+
+    @RequestMapping("/login")
+    public String login(String username, String password) {
+        String msg = "";
+//        User username = UserServlet.getUser();
+        if (!username.equals("username") || !password.equals("password")) {
+            System.out.println(!username.equals("username") || !password.equals("password"));
+            System.out.println(username + "-----" + password);
+            msg = "账号或密码错误";
+        } else {
+            msg = "登录成功";
+        }
+        return msg;
+    }
 }
