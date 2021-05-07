@@ -80,9 +80,11 @@ public class UserController {
 
         System.out.println("*******Java对象 转 JSON字符串*******");
         String str1 = JSON.toJSONString(list);
-        System.out.println("JSON.toJSONString(list)==>"+str1);
+        System.out.println("JSON.toJSONString(list)==>" + str1);
         String str2 = JSON.toJSONString(user1);
-        System.out.println("JSON.toJSONString(user1)==>"+str2);
+        System.out.println("JSON.toJSONString(user1)==>" + str2);
+
+        System.out.println("这里的顺序变了，age到了第一个");
 
         System.out.println("\n****** JSON字符串 转 Java对象*******");
         User jp_user1=JSON.parseObject(str2,User.class);
