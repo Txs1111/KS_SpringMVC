@@ -12,12 +12,12 @@ public class LoginInterceptor implements HandlerInterceptor {
         //放行:判断什么情况下登录
 
         //登录页面也会放行
-        if (request.getRequestURI().contains("goLogin")) {
-            return true;
-        }
-        if (request.getRequestURI().contains("login")) {
-            return true;
-        }
+//        if (request.getRequestURI().contains("goLogin")) {
+//            return true;
+//        }
+//        if (request.getRequestURI().contains("login")) {
+//            return true;
+//        }
         if (session.getAttribute("userLoginInfo") != null) {
             return true;
         }

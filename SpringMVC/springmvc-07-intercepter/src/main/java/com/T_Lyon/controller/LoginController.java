@@ -22,7 +22,7 @@ public class LoginController {
     @RequestMapping("/login")
     public String login(HttpSession session, String username, String password, Model model) {
 
-        //°ÑÓÃ»§µÄĞÅÏ¢´æÔÚsessionÖĞ
+        //æŠŠç”¨æˆ·çš„ä¿¡æ¯å­˜åœ¨sessionä¸­
         session.setAttribute("userLoginInfo", username);
         model.addAttribute("password", password);
         model.addAttribute("username", username);
